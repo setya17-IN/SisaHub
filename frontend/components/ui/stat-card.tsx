@@ -1,0 +1,3 @@
+import type { ReactNode } from "react";
+import { Card } from "./card";
+export function StatCard({ label, value, detail, icon }: { label: string; value: string; detail?: string; icon?: ReactNode }) { return <Card className="p-5"><div className="flex items-start justify-between gap-4"><div><p className="text-sm font-medium text-text-muted">{label}</p><p className="mt-2 text-2xl font-bold tabular-nums text-text">{value}</p>{detail && <p className="mt-1 text-xs text-text-muted">{detail}</p>}</div>{icon && <span className="inline-flex size-10 items-center justify-center rounded-control bg-primary-50 text-primary">{icon}</span>}</div></Card>; }

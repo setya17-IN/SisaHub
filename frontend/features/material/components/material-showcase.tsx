@@ -1,0 +1,2 @@
+import { MaterialCard } from "./material-card";
+export function MaterialShowcase() { return <section><h2 className="text-xl font-bold">Kartu material</h2><div className="mt-4 max-w-sm"><MaterialCard material={{ id: "preview-1", title: "Sisa kain katun 50 meter", category: "kain", quantityLabel: "50 meter", conditionLabel: "Baik", conditionTone: "info", free: true, city: "Surabaya", distance: "3 km", ownerName: "Rina Putri" }} /></div></section>; }
