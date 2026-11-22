@@ -1,0 +1,2 @@
+import type { Metadata } from "next"; import { Container } from "@/components/layout/container"; import { PageHeader } from "@/components/layout/page-header"; import { EmptyState } from "@/components/ui/empty-state";
+export const metadata: Metadata = { title: "Favorit" }; export default function FavoritesPage() { return <><PageHeader title="Favorit" description="Material yang Anda simpan." /><main className="py-8"><Container><EmptyState title="Halaman Favorit akan dibangun pada fase Pxx" description="Kerangka halaman telah siap." /></Container></main></>; }

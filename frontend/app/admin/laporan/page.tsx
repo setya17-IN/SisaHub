@@ -1,0 +1,2 @@
+import type { Metadata } from "next"; import { Container } from "@/components/layout/container"; import { PageHeader } from "@/components/layout/page-header"; import { EmptyState } from "@/components/ui/empty-state";
+export const metadata: Metadata = { title: "Admin laporan" }; export default function AdminReportsPage() { return <><PageHeader title="Laporan" description="Kelola laporan dari pengguna." /><main className="py-8"><Container><EmptyState title="Halaman Laporan akan dibangun pada fase Pxx" description="Kerangka halaman telah siap." /></Container></main></>; }

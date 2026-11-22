@@ -1,0 +1,2 @@
+import type { Metadata } from "next"; import { Container } from "@/components/layout/container"; import { PageHeader } from "@/components/layout/page-header"; import { EmptyState } from "@/components/ui/empty-state";
+export const metadata: Metadata = { title: "Dashboard" }; export default function DashboardPage() { return <><PageHeader title="Dashboard" description="Ringkasan aktivitas akun Anda." /><main className="py-8"><Container><EmptyState title="Halaman Dashboard akan dibangun pada fase Pxx" description="Kerangka halaman telah siap." /></Container></main></>; }

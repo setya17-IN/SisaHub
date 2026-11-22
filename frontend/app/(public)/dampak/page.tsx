@@ -1,0 +1,2 @@
+import type { Metadata } from "next"; import { Container } from "@/components/layout/container"; import { PageHeader } from "@/components/layout/page-header"; import { EmptyState } from "@/components/ui/empty-state";
+export const metadata: Metadata = { title: "Dampak" }; export default function ImpactPage() { return <><PageHeader title="Dampak" description="Dampak dari material yang kembali bernilai." /><main className="py-8"><Container><EmptyState title="Halaman Dampak akan dibangun pada fase Pxx" description="Kerangka halaman telah siap." /></Container></main></>; }

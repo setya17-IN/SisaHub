@@ -1,0 +1,2 @@
+import type { Metadata } from "next"; import { Container } from "@/components/layout/container"; import { PageHeader } from "@/components/layout/page-header"; import { EmptyState } from "@/components/ui/empty-state";
+export const metadata: Metadata = { title: "Permintaan" }; export default function RequestsPage() { return <><PageHeader title="Permintaan" description="Kelola permintaan material." /><main className="py-8"><Container><EmptyState title="Halaman Permintaan akan dibangun pada fase Pxx" description="Kerangka halaman telah siap." /></Container></main></>; }
