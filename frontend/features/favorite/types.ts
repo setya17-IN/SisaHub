@@ -1,2 +1,6 @@
-/** TODO: Re-export favorite types from @/lib/api/schema after OpenAPI generation. */
-export {};
+export type FavoriteRecord = {
+  id: string;
+  materialId: string;
+  savedAt: string;
+  note?: string;
+};

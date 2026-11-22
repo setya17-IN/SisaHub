@@ -1,2 +1,10 @@
-/** TODO: Re-export scanner types from @/lib/api/schema after OpenAPI generation. */
-export {};
+export type ScannerResult = {
+  category: string;
+  categoryLabel: string;
+  condition: "new" | "good" | "fair";
+  conditionLabel: string;
+  confidence: number;
+  suggestedTitle: string;
+  suggestedTags: string[];
+  note: string;
+};

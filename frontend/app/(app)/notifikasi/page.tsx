@@ -1,2 +1,23 @@
-import type { Metadata } from "next"; import { Container } from "@/components/layout/container"; import { PageHeader } from "@/components/layout/page-header"; import { EmptyState } from "@/components/ui/empty-state";
-export const metadata: Metadata = { title: "Notifikasi" }; export default function NotificationsPage() { return <><PageHeader title="Notifikasi" description="Pembaruan penting untuk akun Anda." /><main className="py-8"><Container><EmptyState title="Halaman Notifikasi akan dibangun pada fase Pxx" description="Kerangka halaman telah siap." /></Container></main></>; }
+import type { Metadata } from "next";
+import { Container } from "@/components/layout/container";
+import { PageHeader } from "@/components/layout/page-header";
+import { NotificationList, notifications } from "@/features/notification";
+
+export const metadata: Metadata = { title: "Notifikasi" };
+
+export default function NotificationsPage() {
+  return (
+    <>
+      <PageHeader
+        eyebrow="Pembaruan"
+        title="Notifikasi"
+        description="Permintaan, pesan, Smart Match, dan pembaruan akun dalam satu tempat."
+      />
+      <main className="py-8">
+        <Container>
+          <NotificationList items={notifications} />
+        </Container>
+      </main>
+    </>
+  );
+}

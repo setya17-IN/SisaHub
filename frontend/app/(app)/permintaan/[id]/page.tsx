@@ -1,2 +1,16 @@
-import type { Metadata } from "next"; import { Container } from "@/components/layout/container"; import { PageHeader } from "@/components/layout/page-header"; import { EmptyState } from "@/components/ui/empty-state";
-export const metadata: Metadata = { title: "Detail permintaan" }; export default function RequestPage() { return <><PageHeader title="Detail permintaan" description="Informasi permintaan material." /><main className="py-8"><Container><EmptyState title="Halaman Detail permintaan akan dibangun pada fase Pxx" description="Kerangka halaman telah siap." /></Container></main></>; }
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { RequestDetail, getRequestById } from "@/features/request";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const request = getRequestById(id);
+  return { title: request ? `Permintaan ${request.id}` : "Permintaan tidak ditemukan" };
+}
+
+export default async function RequestPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const request = getRequestById(id);
+  if (!request) notFound();
+  return <RequestDetail request={request} />;
+}

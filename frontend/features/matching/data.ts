@@ -1,0 +1,40 @@
+import type { MatchSuggestion } from "./types";
+
+export const matchSuggestions: MatchSuggestion[] = [
+  {
+    id: "match-1",
+    materialId: "sisa-kain-katun-50-meter",
+    title: "Sisa kain katun perca 50 meter",
+    category: "kain",
+    city: "Surabaya",
+    distanceKm: 3,
+    score: 96,
+    reason: "Kategori kain, lokasi dekat, dan gratis.",
+    quantityLabel: "50 meter",
+    priceLabel: "Gratis",
+  },
+  {
+    id: "match-2",
+    materialId: "kain-perca-batik-5-kg",
+    title: "Kain perca batik 5 kg",
+    category: "kain",
+    city: "Solo",
+    distanceKm: 6,
+    score: 88,
+    reason: "Cocok untuk produk patchwork dan kerajinan.",
+    quantityLabel: "5 kg",
+    priceLabel: "Gratis",
+  },
+  {
+    id: "match-3",
+    materialId: "gulungan-kertas-kraft-30-kg",
+    title: "Gulungan kertas kraft 30 kg",
+    category: "kertas-kardus",
+    city: "Semarang",
+    distanceKm: 9,
+    score: 81,
+    reason: "Bahan kemasan untuk usaha kecil.",
+    quantityLabel: "30 kg",
+    priceLabel: "Rp210.000",
+  },
+];

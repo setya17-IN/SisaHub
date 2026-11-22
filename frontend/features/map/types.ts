@@ -1,2 +1,8 @@
-/** TODO: Re-export map types from @/lib/api/schema after OpenAPI generation. */
-export {};
+export type MapPinPoint = {
+  id: string;
+  label: string;
+  city: string;
+  x: number;
+  y: number;
+  active?: boolean;
+};

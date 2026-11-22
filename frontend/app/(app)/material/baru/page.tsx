@@ -1,2 +1,23 @@
-import type { Metadata } from "next"; import { Container } from "@/components/layout/container"; import { PageHeader } from "@/components/layout/page-header"; import { EmptyState } from "@/components/ui/empty-state";
-export const metadata: Metadata = { title: "Material baru" }; export default function NewMaterialPage() { return <><PageHeader title="Material baru" description="Tambahkan material sisa layak pakai." /><main className="py-8"><Container><EmptyState title="Halaman Material baru akan dibangun pada fase Pxx" description="Kerangka halaman telah siap." /></Container></main></>; }
+import type { Metadata } from "next";
+import { Container } from "@/components/layout/container";
+import { PageHeader } from "@/components/layout/page-header";
+import { MaterialForm } from "@/features/material";
+
+export const metadata: Metadata = { title: "Material baru" };
+
+export default function NewMaterialPage() {
+  return (
+    <>
+      <PageHeader
+        eyebrow="Bagikan material"
+        title="Material baru"
+        description="Lengkapi informasi material sisa layak pakai. Semakin jelas detailnya, semakin cepat menemukan penerima yang tepat."
+      />
+      <main className="py-8">
+        <Container>
+          <MaterialForm />
+        </Container>
+      </main>
+    </>
+  );
+}

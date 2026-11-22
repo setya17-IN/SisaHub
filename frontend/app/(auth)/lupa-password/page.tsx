@@ -1,2 +1,17 @@
-import type { Metadata } from "next"; import { Container } from "@/components/layout/container"; import { PageHeader } from "@/components/layout/page-header"; import { EmptyState } from "@/components/ui/empty-state";
-export const metadata: Metadata = { title: "Lupa kata sandi" }; export default function ForgotPasswordPage() { return <><PageHeader title="Lupa kata sandi" description="Atur ulang akses akun Anda." /><main className="py-8"><Container><EmptyState title="Halaman Lupa kata sandi akan dibangun pada fase Pxx" description="Kerangka halaman telah siap." /></Container></main></>; }
+import type { Metadata } from "next";
+import { ForgotPasswordForm } from "@/features/auth";
+
+export const metadata: Metadata = { title: "Lupa kata sandi" };
+
+export default function ForgotPasswordPage() {
+  return (
+    <div className="space-y-6">
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wide text-primary">Pemulihan akun</p>
+        <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">Lupa kata sandi?</h1>
+        <p className="mt-2 text-sm leading-6 text-text-muted">Masukkan email terdaftar untuk menerima tautan pengaturan ulang.</p>
+      </div>
+      <ForgotPasswordForm />
+    </div>
+  );
+}
