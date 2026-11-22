@@ -1,0 +1,4 @@
+import Image from "next/image";
+import { UserRound } from "lucide-react";
+import { cn } from "@/lib/utils/cn";
+export function Avatar({ name, src, size = "md", className }: { name: string; src?: string | null; size?: "sm" | "md" | "lg"; className?: string }) { const dimensions = { sm: "size-8 text-xs", md: "size-10 text-sm", lg: "size-14 text-base" }; return <span className={cn("relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary-100 font-semibold text-primary-800", dimensions[size], className)}>{src ? <Image src={src} alt={name} fill unoptimized sizes="56px" className="object-cover" /> : <span aria-label={name}>{name.trim().split(/\s+/).slice(0, 2).map((part) => part[0]?.toUpperCase()).join("") || <UserRound className="size-5" />}</span>}</span>; }

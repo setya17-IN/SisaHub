@@ -1,0 +1,2 @@
+import { Star } from "lucide-react";
+export function Rating({ value, label = "Rating" }: { value: number; label?: string }) { const safeValue = Math.max(0, Math.min(5, value)); return <span className="inline-flex items-center gap-1 text-sm" aria-label={`${label}: ${safeValue.toFixed(1)} dari 5`}><Star className="size-4 fill-accent-500 text-accent-700" aria-hidden="true" /><span className="font-semibold tabular-nums">{safeValue.toFixed(1)}</span></span>; }

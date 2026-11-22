@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+export function Breadcrumb({ items }: { items: Array<{ label: string; href?: string }> }) { return <nav aria-label="Breadcrumb"><ol className="flex flex-wrap items-center gap-1 text-sm text-text-muted">{items.map((item, index) => <li key={`${item.label}-${index}`} className="inline-flex items-center gap-1">{index > 0 && <ChevronRight className="size-4" aria-hidden="true" />}{item.href && index < items.length - 1 ? <Link className="min-h-11 inline-flex items-center hover:text-primary" href={item.href}>{item.label}</Link> : <span aria-current="page" className="min-h-11 inline-flex items-center font-medium text-text">{item.label}</span>}</li>)}</ol></nav>; }

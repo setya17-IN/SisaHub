@@ -1,0 +1,68 @@
+import type { WantedItem } from "./types";
+
+export const wantedItems: WantedItem[] = [
+  {
+    id: "butuh-kain-katun-untuk-pelatihan",
+    title: "Butuh kain katun untuk pelatihan menjahit",
+    description:
+      "Kami membuka pelatihan menjahit untuk 20 ibu rumah tangga. Membutuhkan kain katun atau perca berukuran minimal 30x30 cm untuk latihan membuat pouch.",
+    category: "kain",
+    quantity: 15,
+    unit: "kg",
+    city: "Surabaya",
+    deadline: "2026-12-05",
+    urgency: "high",
+    status: "open",
+    offers: 3,
+    requester: { id: "komunitas-karya", name: "Siti Rahma", organization: "Komunitas Karya Baru", verified: true, rating: 4.8 },
+    createdAt: "2026-11-19",
+  },
+  {
+    id: "kardus-untuk-pengemasan-umkm",
+    title: "Kardus bekas untuk pengemasan UMKM",
+    description:
+      "Usaha kue rumahan membutuhkan kardus bekas ukuran sedang untuk mengirim pesanan. Kardus yang kokoh dan kering lebih diutamakan.",
+    category: "kertas-kardus",
+    quantity: 10,
+    unit: "kg",
+    city: "Bandung",
+    deadline: "2026-11-30",
+    urgency: "normal",
+    status: "open",
+    offers: 1,
+    requester: { id: "dapur-rumah", name: "Maya Lestari", organization: "Dapur Rumah Kue", verified: false, rating: 4.5 },
+    createdAt: "2026-11-18",
+  },
+  {
+    id: "kayu-untuk-workshop-anak",
+    title: "Potongan kayu untuk workshop anak",
+    description:
+      "Workshop kerajinan anak membutuhkan potongan kayu halus tanpa serpihan tajam untuk membuat mainan edukatif. Ukuran 10-30 cm.",
+    category: "kayu",
+    quantity: 5,
+    unit: "kg",
+    city: "Yogyakarta",
+    deadline: "2026-12-12",
+    urgency: "normal",
+    status: "open",
+    offers: 2,
+    requester: { id: "rumah-belajar", name: "Bagas Pratama", organization: "Rumah Belajar Aksara", verified: true, rating: 4.9 },
+    createdAt: "2026-11-17",
+  },
+  {
+    id: "botol-plastik-untuk-vertical-garden",
+    title: "Botol plastik untuk taman vertikal",
+    description:
+      "Kami membuat taman vertikal di sekolah dasar. Membutuhkan 100 botol plastik ukuran 1,5 liter yang sudah dicuci dan tutupnya masih ada.",
+    category: "plastik",
+    quantity: 100,
+    unit: "pcs",
+    city: "Jakarta Selatan",
+    deadline: "2026-12-20",
+    urgency: "normal",
+    status: "matched",
+    offers: 5,
+    requester: { id: "sekolah-hijau", name: "Pak Andi", organization: "SD Negeri 05 Pagi", verified: true, rating: 4.7 },
+    createdAt: "2026-11-15",
+  },
+];
