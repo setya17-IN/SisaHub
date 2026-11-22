@@ -1,0 +1,2 @@
+import { CircleDashed } from "lucide-react";
+export function EmptyState({ title, description }: { title: string; description: string }) { return <div className="flex min-h-56 flex-col items-center justify-center rounded-card border border-dashed border-neutral-300 bg-surface px-6 text-center"><CircleDashed className="mb-3 size-8 text-primary" aria-hidden="true" /><h2 className="font-semibold text-text">{title}</h2><p className="mt-1 max-w-md text-sm text-text-muted">{description}</p></div>; }
